@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  MoodTracker
+
+  Created by Mustafa on 27.07.2023.
+  
+*/
+
+"mood_tracker" = "Mod Takipçisi";
+"rate_your_day" = "Gününü puanla";
