@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */; };
-		4580CB7D2A72AFDA00142134 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7C2A72AFDA00142134 /* ContentView.swift */; };
+		4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7C2A72AFDA00142134 /* HomeView.swift */; };
 		4580CB7F2A72AFDB00142134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB7E2A72AFDB00142134 /* Assets.xcassets */; };
 		4580CB822A72AFDB00142134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB812A72AFDB00142134 /* Preview Assets.xcassets */; };
 		458CD6122A72B251007BF125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458CD6142A72B251007BF125 /* Localizable.strings */; };
+		458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CD6162A72DA29007BF125 /* DayRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4580CB772A72AFDA00142134 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerApp.swift; sourceTree = "<group>"; };
-		4580CB7C2A72AFDA00142134 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4580CB7C2A72AFDA00142134 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4580CB7E2A72AFDB00142134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4580CB812A72AFDB00142134 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		458CD6132A72B251007BF125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		458CD6152A72B295007BF125 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		458CD6162A72DA29007BF125 /* DayRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 			children = (
 				458CD6142A72B251007BF125 /* Localizable.strings */,
 				4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */,
-				4580CB7C2A72AFDA00142134 /* ContentView.swift */,
+				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
 				4580CB7E2A72AFDB00142134 /* Assets.xcassets */,
 				4580CB802A72AFDB00142134 /* Preview Content */,
+				458CD6162A72DA29007BF125 /* DayRatingView.swift */,
 			);
 			path = MoodTracker;
 			sourceTree = "<group>";
@@ -143,8 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4580CB7D2A72AFDA00142134 /* ContentView.swift in Sources */,
+				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
+				458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
