@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
+
+    @State private var ratings = Rating.mockRatings
+
     var body: some View {
         VStack(spacing: 0) {
-            DayRatingView()
+            DayRatingView(ratings: $ratings)
 
             ScrollView {
                 VStack(spacing: 0) {
-                    ForEach(Rating.mockRatings) { rating in
+                    ForEach(ratings) { rating in
                         RatingRow(rating: rating)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
@@ -27,6 +30,7 @@ struct HomeView: View {
         .navigationTitle("mood_tracker")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.orange)
+        .animation(.linear, value: ratings.count)
     }
 }
 
