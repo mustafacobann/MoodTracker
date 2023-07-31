@@ -13,7 +13,14 @@ struct HomeView: View {
             DayRatingView()
 
             ScrollView {
-                // TODO: previous ratings to be shown here
+                VStack(spacing: 0) {
+                    ForEach(Rating.mockRatings) { rating in
+                        RatingRow(rating: rating)
+                            .padding(.horizontal, 12)
+                            .padding(.vertical, 6)
+                    }
+                }
+                .padding(.top, 12)
             }
         }
         .clipped()

@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct RatingRow: View {
+    let rating: Rating
+
+    var dateString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        return dateFormatter.string(from: rating.date)
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text(dateString)
+            Spacer()
+            Text("\(rating.rating)")
+        }
+        .padding()
+        .background(.regularMaterial)
+        .cornerRadius(10)
     }
 }
 
 struct RatingRow_Previews: PreviewProvider {
     static var previews: some View {
-        RatingRow()
+        RatingRow(rating: Rating(date: .now, rating: 5))
     }
 }

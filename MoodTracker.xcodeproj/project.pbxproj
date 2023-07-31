@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452513FB2A7815670015F24F /* day_rating_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 452513FA2A7815670015F24F /* day_rating_animation.json */; };
+		452513FD2A78186A0015F24F /* RatingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FC2A78186A0015F24F /* RatingRow.swift */; };
+		452513FF2A781A160015F24F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FE2A781A160015F24F /* Rating.swift */; };
 		4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */; };
 		4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7C2A72AFDA00142134 /* HomeView.swift */; };
 		4580CB7F2A72AFDB00142134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB7E2A72AFDB00142134 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452513FA2A7815670015F24F /* day_rating_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = day_rating_animation.json; sourceTree = "<group>"; };
+		452513FC2A78186A0015F24F /* RatingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRow.swift; sourceTree = "<group>"; };
+		452513FE2A781A160015F24F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		4580CB772A72AFDA00142134 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerApp.swift; sourceTree = "<group>"; };
 		4580CB7C2A72AFDA00142134 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,9 +70,12 @@
 				4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */,
 				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
 				4580CB7E2A72AFDB00142134 /* Assets.xcassets */,
+				452513FA2A7815670015F24F /* day_rating_animation.json */,
 				4580CB802A72AFDB00142134 /* Preview Content */,
 				458CD6162A72DA29007BF125 /* DayRatingView.swift */,
 				458CD61B2A72EA4A007BF125 /* LottieView.swift */,
+				452513FC2A78186A0015F24F /* RatingRow.swift */,
+				452513FE2A781A160015F24F /* Rating.swift */,
 			);
 			path = MoodTracker;
 			sourceTree = "<group>";
@@ -158,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452513FF2A781A160015F24F /* Rating.swift in Sources */,
+				452513FD2A78186A0015F24F /* RatingRow.swift in Sources */,
 				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
 				458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */,
