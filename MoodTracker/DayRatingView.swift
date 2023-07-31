@@ -42,6 +42,15 @@ struct DayRatingView: View {
         .frame(maxWidth: .infinity)
         .padding(20)
         .background(.thinMaterial)
+        .overlay {
+            if isRatingDone {
+                LottieView(
+                    name: "day_rating_animation",
+                    loopMode: .playOnce,
+                    speed: 2
+                )
+            }
+        }
     }
 }
 
