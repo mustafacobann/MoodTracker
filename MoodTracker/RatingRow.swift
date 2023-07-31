@@ -19,8 +19,15 @@ struct RatingRow: View {
     var body: some View {
         HStack {
             Text(dateString)
+                .font(.title3.bold())
             Spacer()
             Text("\(rating.rating)")
+                .foregroundColor(.white)
+                .padding()
+                .background {
+                    Circle()
+                        .fill(.black)
+                }
         }
         .padding()
         .background(.regularMaterial)
