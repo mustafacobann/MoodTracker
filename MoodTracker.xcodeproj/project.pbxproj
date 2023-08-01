@@ -68,6 +68,48 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		452081AD2A79418F0062BCCF /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				452513FA2A7815670015F24F /* day_rating_animation.json */,
+				458CD61B2A72EA4A007BF125 /* LottieView.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		452081AE2A79419C0062BCCF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				458CD6142A72B251007BF125 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		452081AF2A7941AA0062BCCF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		452081B02A7941B70062BCCF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				458CD6162A72DA29007BF125 /* DayRatingView.swift */,
+				452513FC2A78186A0015F24F /* RatingRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		452081B12A7941BC0062BCCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				452513FE2A781A160015F24F /* Rating.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4580CB6E2A72AFDA00142134 = {
 			isa = PBXGroup;
 			children = (
@@ -88,17 +130,15 @@
 			isa = PBXGroup;
 			children = (
 				452081AA2A793F770062BCCF /* Info.plist */,
-				458CD6142A72B251007BF125 /* Localizable.strings */,
+				452081AE2A79419C0062BCCF /* Localization */,
 				4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */,
 				452081AB2A7940F40062BCCF /* Fonts */,
-				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
+				452081AF2A7941AA0062BCCF /* Screens */,
 				4580CB7E2A72AFDB00142134 /* Assets.xcassets */,
-				452513FA2A7815670015F24F /* day_rating_animation.json */,
+				452081AD2A79418F0062BCCF /* Lottie */,
 				4580CB802A72AFDB00142134 /* Preview Content */,
-				458CD6162A72DA29007BF125 /* DayRatingView.swift */,
-				458CD61B2A72EA4A007BF125 /* LottieView.swift */,
-				452513FC2A78186A0015F24F /* RatingRow.swift */,
-				452513FE2A781A160015F24F /* Rating.swift */,
+				452081B02A7941B70062BCCF /* Views */,
+				452081B12A7941BC0062BCCF /* Models */,
 				452081AC2A7941100062BCCF /* Extensions */,
 			);
 			path = MoodTracker;
