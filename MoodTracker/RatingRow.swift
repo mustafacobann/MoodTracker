@@ -19,7 +19,6 @@ struct RatingRow: View {
     var body: some View {
         HStack {
             Text(dateString)
-                .font(.title3.bold())
             Spacer()
             Text("\(rating.rating)")
                 .foregroundColor(.white)
@@ -29,6 +28,7 @@ struct RatingRow: View {
                         .fill(.black)
                 }
         }
+        .font(.custom(.varela, size: 20))
         .padding()
         .background(.regularMaterial)
         .cornerRadius(10)

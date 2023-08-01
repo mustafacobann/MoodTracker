@@ -22,7 +22,6 @@ struct DayRatingView: View {
 
             if let selectedRating {
                 Text("\(selectedRating)")
-                    .font(.title.bold())
             } else {
                 HStack(spacing: 0) {
                     ForEach(0..<5) { rating in
@@ -42,6 +41,7 @@ struct DayRatingView: View {
                 }
             }
         }
+        .font(.custom(.varela, size: 34))
         .frame(maxWidth: .infinity)
         .padding(20)
         .background(.thinMaterial)
@@ -62,7 +62,6 @@ private struct TitleView: View {
 
     var body: some View {
         Text(isRatingDone ? "todays_rating" : "rate_your_day")
-            .font(.title.bold())
     }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452081A52A7938020062BCCF /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */; };
+		452081A92A7939240062BCCF /* String+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081A82A7939240062BCCF /* String+Strings.swift */; };
 		452513FB2A7815670015F24F /* day_rating_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 452513FA2A7815670015F24F /* day_rating_animation.json */; };
 		452513FD2A78186A0015F24F /* RatingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FC2A78186A0015F24F /* RatingRow.swift */; };
 		452513FF2A781A160015F24F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FE2A781A160015F24F /* Rating.swift */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
+		452081A82A7939240062BCCF /* String+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Strings.swift"; sourceTree = "<group>"; };
+		452081AA2A793F770062BCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		452513FA2A7815670015F24F /* day_rating_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = day_rating_animation.json; sourceTree = "<group>"; };
 		452513FC2A78186A0015F24F /* RatingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRow.swift; sourceTree = "<group>"; };
 		452513FE2A781A160015F24F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
@@ -47,6 +52,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452081AB2A7940F40062BCCF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		452081AC2A7941100062BCCF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				452081A82A7939240062BCCF /* String+Strings.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4580CB6E2A72AFDA00142134 = {
 			isa = PBXGroup;
 			children = (
@@ -66,8 +87,10 @@
 		4580CB792A72AFDA00142134 /* MoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				452081AA2A793F770062BCCF /* Info.plist */,
 				458CD6142A72B251007BF125 /* Localizable.strings */,
 				4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */,
+				452081AB2A7940F40062BCCF /* Fonts */,
 				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
 				4580CB7E2A72AFDB00142134 /* Assets.xcassets */,
 				452513FA2A7815670015F24F /* day_rating_animation.json */,
@@ -76,6 +99,7 @@
 				458CD61B2A72EA4A007BF125 /* LottieView.swift */,
 				452513FC2A78186A0015F24F /* RatingRow.swift */,
 				452513FE2A781A160015F24F /* Rating.swift */,
+				452081AC2A7941100062BCCF /* Extensions */,
 			);
 			path = MoodTracker;
 			sourceTree = "<group>";
@@ -154,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4580CB822A72AFDB00142134 /* Preview Assets.xcassets in Resources */,
+				452081A52A7938020062BCCF /* VarelaRound-Regular.ttf in Resources */,
 				458CD6122A72B251007BF125 /* Localizable.strings in Resources */,
 				452513FB2A7815670015F24F /* day_rating_animation.json in Resources */,
 				4580CB7F2A72AFDB00142134 /* Assets.xcassets in Resources */,
@@ -168,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452513FF2A781A160015F24F /* Rating.swift in Sources */,
+				452081A92A7939240062BCCF /* String+Strings.swift in Sources */,
 				452513FD2A78186A0015F24F /* RatingRow.swift in Sources */,
 				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
@@ -318,6 +344,7 @@
 				DEVELOPMENT_TEAM = YHB6627S43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoodTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -348,6 +375,7 @@
 				DEVELOPMENT_TEAM = YHB6627S43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MoodTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
