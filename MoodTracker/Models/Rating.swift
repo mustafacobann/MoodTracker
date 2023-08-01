@@ -9,7 +9,7 @@ import Foundation
 
 struct Rating: Identifiable {
     let date: Date
-    let rating: Int
+    let value: Int
 
     var id: Date { date }
 }
@@ -19,8 +19,8 @@ extension Rating {
         var ratings: [Rating] = []
         for i in 1..<16 {
             if let date = Calendar.current.date(byAdding: .day, value: -i, to: .now) {
-                let rating = Int.random(in: 0..<5)
-                ratings.append(Rating(date: date, rating: rating))
+                let rating = Int.random(in: 1...5)
+                ratings.append(Rating(date: date, value: rating))
             }
         }
         return ratings

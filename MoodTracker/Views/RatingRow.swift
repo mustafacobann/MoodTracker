@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RatingRow: View {
+
     let rating: Rating
 
     var dateString: String {
@@ -20,7 +21,7 @@ struct RatingRow: View {
         HStack {
             Text(dateString)
             Spacer()
-            Text("\(rating.rating)")
+            Text("\(rating.value)")
                 .foregroundColor(.white)
                 .padding()
                 .background {
@@ -37,6 +38,6 @@ struct RatingRow: View {
 
 struct RatingRow_Previews: PreviewProvider {
     static var previews: some View {
-        RatingRow(rating: Rating(date: .now, rating: 5))
+        RatingRow(rating: Rating(date: .now, value: 5))
     }
 }
