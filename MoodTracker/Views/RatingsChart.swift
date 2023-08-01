@@ -17,7 +17,7 @@ struct RatingsChart: View {
             ForEach(ratings) { rating in
                 BarMark(
                     x: .value("Date", rating.date, unit: .day),
-                    y: .value("Rating", rating.rating)
+                    y: .value("Rating", rating.value)
                 )
             }
         }
