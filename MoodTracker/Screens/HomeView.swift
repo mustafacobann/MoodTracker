@@ -11,9 +11,19 @@ struct HomeView: View {
 
     @State private var ratings = Rating.mockRatings
 
+    var last7DaysRatings: [Rating] {
+        Array(ratings.prefix(upTo: 7))
+    }
+
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 12) {
             DayRatingView(ratings: $ratings)
+
+            Text("weekly_overview")
+                .font(.custom(.varela, size: 20))
+
+            RatingsChart(ratings: last7DaysRatings)
+                .padding(.horizontal, 12)
 
             ScrollView {
                 VStack(spacing: 0) {
@@ -23,7 +33,6 @@ struct HomeView: View {
                             .padding(.vertical, 6)
                     }
                 }
-                .padding(.top, 12)
             }
         }
         .clipped()

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RatingRow: View {
+
     let rating: Rating
 
     var dateString: String {
