@@ -52,7 +52,7 @@ struct HomeView: View {
         rating.date = .now
         rating.value = Int16(value)
 
-        try? context.save()
+        try? context.save() // TODO: handle possible errors
     }
 }
 
