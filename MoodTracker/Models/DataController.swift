@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-class DataController: ObservableObject {
+class DataController {
     let container = NSPersistentContainer(name: "MoodTrackerDataModel")
     
     init() {

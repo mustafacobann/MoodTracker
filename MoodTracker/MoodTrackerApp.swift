@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MoodTrackerApp: App {
 
-    @StateObject private var dataController = DataController()
+    private let dataController = DataController()
 
     var body: some Scene {
         WindowGroup {
