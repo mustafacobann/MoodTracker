@@ -19,7 +19,7 @@ struct HomeView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            DayRatingView { selectedRating in
+            DayRatingView(ratings: Array(ratings)) { selectedRating in
                 saveTodaysRating(selectedRating)
             }
 
