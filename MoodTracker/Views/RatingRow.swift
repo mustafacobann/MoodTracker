@@ -38,9 +38,8 @@ struct RatingRow: View {
     }
 }
 
-// FIXME: Fix previews so they can work with CoreData
-//struct RatingRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RatingRow(rating: )
-//    }
-//}
+struct RatingRow_Previews: PreviewProvider {
+    static var previews: some View {
+        RatingRow(rating: Rating.previewRatings[0])
+    }
+}

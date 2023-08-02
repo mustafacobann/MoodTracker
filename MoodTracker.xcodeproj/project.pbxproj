@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45187D1B2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */; };
 		452081A52A7938020062BCCF /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */; };
 		452081A92A7939240062BCCF /* String+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081A82A7939240062BCCF /* String+Strings.swift */; };
 		452081B32A79504E0062BCCF /* RatingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081B22A79504E0062BCCF /* RatingsChart.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rating+PreviewRatings.swift"; sourceTree = "<group>"; };
 		452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 		452081A82A7939240062BCCF /* String+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Strings.swift"; sourceTree = "<group>"; };
 		452081AA2A793F770062BCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				452081A82A7939240062BCCF /* String+Strings.swift */,
+				45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
 				457B132C2A7AB3C5002D2F09 /* DataController.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
+				45187D1B2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift in Sources */,
 				458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */,
 				458CD61C2A72EA4A007BF125 /* LottieView.swift in Sources */,
 				452081B32A79504E0062BCCF /* RatingsChart.swift in Sources */,

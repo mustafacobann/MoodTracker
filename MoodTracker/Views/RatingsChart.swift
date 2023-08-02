@@ -36,9 +36,8 @@ struct RatingsChart: View {
     }
 }
 
-// FIXME: Fix previews so they can work with CoreData
-//struct RatingsChart_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RatingsChart(ratings: Rating.mockRatings)
-//    }
-//}
+struct RatingsChart_Previews: PreviewProvider {
+    static var previews: some View {
+        RatingsChart(ratings: Rating.previewRatings)
+    }
+}

@@ -74,9 +74,8 @@ private struct TitleView: View {
     }
 }
 
-// FIXME: Fix previews so they can work with CoreData
-//struct DayRatingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DayRatingView(ratings: )
-//    }
-//}
+struct DayRatingView_Previews: PreviewProvider {
+    static var previews: some View {
+        DayRatingView(ratings: Rating.previewRatings, onSelect: {_ in})
+    }
+}
