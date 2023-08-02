@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct MoodTrackerApp: App {
+
+    @StateObject private var dataController = DataController()
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HomeView()
             }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

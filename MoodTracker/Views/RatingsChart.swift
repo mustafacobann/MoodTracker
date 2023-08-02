@@ -15,10 +15,12 @@ struct RatingsChart: View {
     var body: some View {
         Chart {
             ForEach(ratings) { rating in
-                BarMark(
-                    x: .value("Date", rating.date, unit: .day),
-                    y: .value("Rating", rating.value)
-                )
+                if let date = rating.date {
+                    BarMark(
+                        x: .value("Date", date, unit: .day),
+                        y: .value("Rating", rating.value)
+                    )
+                }
             }
         }
         .chartYAxis {
@@ -34,8 +36,9 @@ struct RatingsChart: View {
     }
 }
 
-struct RatingsChart_Previews: PreviewProvider {
-    static var previews: some View {
-        RatingsChart(ratings: Rating.mockRatings)
-    }
-}
+// FIXME: Fix previews so they can work with CoreData
+//struct RatingsChart_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RatingsChart(ratings: Rating.mockRatings)
+//    }
+//}

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DayRatingView: View {
 
-    @Binding var ratings: [Rating]
+    var onSelect: (Int) -> Void
     @State private var selectedRating: Int?
 
     var isRatingDone: Bool {
@@ -26,9 +26,7 @@ struct DayRatingView: View {
                 HStack(spacing: 0) {
                     ForEach(0..<5) { rating in
                         Button {
-                            selectedRating = rating + 1
-                            let rating = Rating(date: .now, value: rating + 1)
-                            ratings.insert(rating, at: 0)
+                            onSelect(rating + 1)
                         }
                         label: {
                             Image(systemName: "star")
@@ -65,8 +63,9 @@ private struct TitleView: View {
     }
 }
 
-struct DayRatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        DayRatingView(ratings: .constant(Rating.mockRatings))
-    }
-}
+// FIXME: Fix previews so they can work with CoreData
+//struct DayRatingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DayRatingView(ratings: )
+//    }
+//}
