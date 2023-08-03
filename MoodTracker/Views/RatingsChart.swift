@@ -11,6 +11,7 @@ import Charts
 struct RatingsChart: View {
 
     let ratings: [Rating]
+    @AppStorage("appColor") var foregroundColor: Color = .orange
 
     var body: some View {
         Chart {
@@ -27,7 +28,7 @@ struct RatingsChart: View {
             AxisMarks(values: [0, 1, 2, 3, 4, 5])
         }
         .chartXAxis(.hidden)
-        .foregroundStyle(.orange)
+        .foregroundStyle(foregroundColor)
         .frame(maxWidth: .infinity)
         .padding()
         .background(.regularMaterial)

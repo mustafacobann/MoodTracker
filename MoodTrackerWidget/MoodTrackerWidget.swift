@@ -46,6 +46,7 @@ struct MoodTrackerWidgetEntryView : View {
 
     var body: some View {
         RatingsChart(ratings: ratingsEntry.ratings)
+            .defaultAppStorage(UserDefaults(suiteName: .appGroup)!)
     }
 }
 
