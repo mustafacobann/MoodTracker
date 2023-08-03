@@ -14,16 +14,15 @@ struct DayRatingView: View {
 
     @State private var shouldPlaySelectionAnimation = false
 
-    var selectedRating: Int16? {
-        guard isRatingDone else { return nil }
-        return ratings.first?.value
+    var selectedRating: Rating? {
+        ratings.first { rating in
+            guard let date = rating.date else { return false }
+            return Calendar.current.isDateInToday(date)
+        }
     }
 
     var isRatingDone: Bool {
-        ratings
-            .compactMap { $0.date }
-            .filter { Calendar.current.isDateInToday($0) }
-            .count > 0
+        selectedRating != nil
     }
 
     var body: some View {
@@ -31,7 +30,7 @@ struct DayRatingView: View {
             TitleView(isRatingDone: isRatingDone)
 
             if let selectedRating {
-                Text("\(selectedRating)")
+                Text("\(selectedRating.value)")
             } else {
                 HStack(spacing: 0) {
                     ForEach(0..<5) { rating in
