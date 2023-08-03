@@ -1,5 +1,5 @@
 //
-//  DataController.swift
+//  PersistenceController.swift
 //  MoodTracker
 //
 //  Created by Mustafa on 2.08.2023.
@@ -8,11 +8,13 @@
 import CoreData
 import Foundation
 
-class DataController {
+class PersistenceController {
     let container = NSPersistentContainer(name: "MoodTrackerDataModel")
+    
+    static let shared = PersistenceController()
 
-    static var preview: DataController = {
-        let previewController = DataController(inMemory: true)
+    static var preview: PersistenceController = {
+        let previewController = PersistenceController(inMemory: true)
 
         for i in 0..<10 {
             if let date = Calendar.current.date(byAdding: .day, value: -i, to: .now) {
@@ -27,6 +29,10 @@ class DataController {
     }()
 
     init(inMemory: Bool = false) {
+        let url = URL.storeURL(for: .appGroup, dbName: "Ratings")
+        let storeDescription = NSPersistentStoreDescription(url: url)
+        container.persistentStoreDescriptions = [storeDescription]
+        
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }

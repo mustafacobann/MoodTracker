@@ -9,12 +9,18 @@ import WidgetKit
 import SwiftUI
 
 struct Provider: TimelineProvider {
+
+    var lastWeekRatings: [Rating] {
+        let context = PersistenceController.shared.container.viewContext
+        return Rating.getLastWeekRatings(for: context)
+    }
+
     func placeholder(in context: Context) -> RatingsEntry {
-        RatingsEntry(date: .now, ratings: [Rating(date: .now, value: 0)])
+        return RatingsEntry(date: .now, ratings: lastWeekRatings)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (RatingsEntry) -> ()) {
-        let entry = RatingsEntry(date: .now, ratings: Array(Rating.mockRatings.prefix(7)))
+        let entry = RatingsEntry(date: .now, ratings: lastWeekRatings)
         completion(entry)
     }
 
@@ -22,7 +28,7 @@ struct Provider: TimelineProvider {
         let entries: [RatingsEntry] = [
             RatingsEntry(
                 date: .now,
-                ratings: Array(Rating.mockRatings.prefix(7))
+                ratings: lastWeekRatings
             )
         ]
         let timeline = Timeline(entries: entries, policy: .never)
@@ -58,7 +64,12 @@ struct MoodTrackerWidget: Widget {
 
 struct MoodTrackerWidget_Previews: PreviewProvider {
     static var previews: some View {
-        MoodTrackerWidgetEntryView(ratingsEntry: RatingsEntry(date: .now, ratings: Array(Rating.mockRatings.prefix(upTo: 7))))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        MoodTrackerWidgetEntryView(
+            ratingsEntry: RatingsEntry(
+                date: .now,
+                ratings: Rating.getLastWeekRatings(for: PersistenceController.preview.container.viewContext)
+            )
+        )
+        .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }
