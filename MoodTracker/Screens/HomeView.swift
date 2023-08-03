@@ -40,6 +40,7 @@ struct HomeView: View {
                             .padding(.vertical, 6)
                     }
                 }
+                .frame(maxWidth: .infinity)
             }
         }
         .clipped()
