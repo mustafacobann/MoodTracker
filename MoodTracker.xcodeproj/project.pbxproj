@@ -18,6 +18,10 @@
 		452081B32A79504E0062BCCF /* RatingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081B22A79504E0062BCCF /* RatingsChart.swift */; };
 		452513FB2A7815670015F24F /* day_rating_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 452513FA2A7815670015F24F /* day_rating_animation.json */; };
 		452513FD2A78186A0015F24F /* RatingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FC2A78186A0015F24F /* RatingRow.swift */; };
+		4560EDE42A7C446A0061C5B6 /* ColorSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDE32A7C446A0061C5B6 /* ColorSelectionScreen.swift */; };
+		4560EDE62A7C4D6A0061C5B6 /* MoodTrackerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E99BE2A79A22E00D1E234 /* MoodTrackerWidget.swift */; };
+		4560EDE82A7C5B200061C5B6 /* Color+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDE72A7C5B200061C5B6 /* Color+RawRepresentable.swift */; };
+		4560EDE92A7C60FD0061C5B6 /* Color+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560EDE72A7C5B200061C5B6 /* Color+RawRepresentable.swift */; };
 		457B132A2A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457B13282A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld */; };
 		457B132C2A7AB3C5002D2F09 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B132B2A7AB3C5002D2F09 /* PersistenceController.swift */; };
 		4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */; };
@@ -32,7 +36,6 @@
 		458E99B82A79A22E00D1E234 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458E99B72A79A22E00D1E234 /* WidgetKit.framework */; };
 		458E99BA2A79A22E00D1E234 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458E99B92A79A22E00D1E234 /* SwiftUI.framework */; };
 		458E99BD2A79A22E00D1E234 /* MoodTrackerWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E99BC2A79A22E00D1E234 /* MoodTrackerWidgetBundle.swift */; };
-		458E99BF2A79A22E00D1E234 /* MoodTrackerWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458E99BE2A79A22E00D1E234 /* MoodTrackerWidget.swift */; };
 		458E99C12A79A23000D1E234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458E99C02A79A23000D1E234 /* Assets.xcassets */; };
 		458E99C52A79A23000D1E234 /* MoodTrackerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 458E99B52A79A22E00D1E234 /* MoodTrackerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		458E99CA2A79A42200D1E234 /* RatingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081B22A79504E0062BCCF /* RatingsChart.swift */; };
@@ -75,6 +78,8 @@
 		452081B22A79504E0062BCCF /* RatingsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsChart.swift; sourceTree = "<group>"; };
 		452513FA2A7815670015F24F /* day_rating_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = day_rating_animation.json; sourceTree = "<group>"; };
 		452513FC2A78186A0015F24F /* RatingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRow.swift; sourceTree = "<group>"; };
+		4560EDE32A7C446A0061C5B6 /* ColorSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionScreen.swift; sourceTree = "<group>"; };
+		4560EDE72A7C5B200061C5B6 /* Color+RawRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RawRepresentable.swift"; sourceTree = "<group>"; };
 		457B13292A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodTrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
 		457B132B2A7AB3C5002D2F09 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		4580CB772A72AFDA00142134 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +135,7 @@
 				452081A82A7939240062BCCF /* String+Strings.swift */,
 				45187D1A2A7AD7CE00D81F9A /* Rating+StoreUtils.swift */,
 				45023DB52A7B315200ECE224 /* URL+StoreURL.swift */,
+				4560EDE72A7C5B200061C5B6 /* Color+RawRepresentable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				4580CB7C2A72AFDA00142134 /* HomeView.swift */,
+				4560EDE32A7C446A0061C5B6 /* ColorSelectionScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -360,9 +367,11 @@
 				452081A92A7939240062BCCF /* String+Strings.swift in Sources */,
 				457B132A2A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld in Sources */,
 				452513FD2A78186A0015F24F /* RatingRow.swift in Sources */,
+				4560EDE82A7C5B200061C5B6 /* Color+RawRepresentable.swift in Sources */,
 				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
 				457B132C2A7AB3C5002D2F09 /* PersistenceController.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
+				4560EDE42A7C446A0061C5B6 /* ColorSelectionScreen.swift in Sources */,
 				45187D1B2A7AD7CE00D81F9A /* Rating+StoreUtils.swift in Sources */,
 				458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */,
 				458CD61C2A72EA4A007BF125 /* LottieView.swift in Sources */,
@@ -380,10 +389,11 @@
 				458E99CA2A79A42200D1E234 /* RatingsChart.swift in Sources */,
 				45023DB12A7B26E300ECE224 /* Rating+StoreUtils.swift in Sources */,
 				45B6DC752A7B341C00D7827A /* String+Strings.swift in Sources */,
+				4560EDE92A7C60FD0061C5B6 /* Color+RawRepresentable.swift in Sources */,
 				458E99BD2A79A22E00D1E234 /* MoodTrackerWidgetBundle.swift in Sources */,
 				45023DB72A7B315200ECE224 /* URL+StoreURL.swift in Sources */,
+				4560EDE62A7C4D6A0061C5B6 /* MoodTrackerWidget.swift in Sources */,
 				45023DB02A7B26B000ECE224 /* MoodTrackerDataModel.xcdatamodeld in Sources */,
-				458E99BF2A79A22E00D1E234 /* MoodTrackerWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

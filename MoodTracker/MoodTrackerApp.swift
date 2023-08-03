@@ -15,6 +15,7 @@ struct MoodTrackerApp: App {
                 HomeView()
             }
             .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+            .defaultAppStorage(UserDefaults(suiteName: .appGroup)!)
         }
     }
 }
