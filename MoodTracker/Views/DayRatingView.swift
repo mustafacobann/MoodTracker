@@ -59,7 +59,8 @@ struct DayRatingView: View {
                 LottieView(
                     name: "day_rating_animation",
                     loopMode: .playOnce,
-                    speed: 2
+                    speed: 2,
+                    onComplete: { shouldPlaySelectionAnimation = false }
                 )
             }
         }
