@@ -32,6 +32,11 @@ struct RatingsChart: View {
         .padding()
         .background(.regularMaterial)
         .cornerRadius(10)
+        .overlay {
+            if ratings.isEmpty {
+                Text("no_ratings_yet")
+            }
+        }
     }
 }
 

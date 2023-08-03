@@ -24,6 +24,7 @@
 		4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7C2A72AFDA00142134 /* HomeView.swift */; };
 		4580CB7F2A72AFDB00142134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB7E2A72AFDB00142134 /* Assets.xcassets */; };
 		4580CB822A72AFDB00142134 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB812A72AFDB00142134 /* Preview Assets.xcassets */; };
+		458951E52A7BC8AE0000C3BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458CD6142A72B251007BF125 /* Localizable.strings */; };
 		458CD6122A72B251007BF125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 458CD6142A72B251007BF125 /* Localizable.strings */; };
 		458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458CD6162A72DA29007BF125 /* DayRatingView.swift */; };
 		458CD61A2A72EA39007BF125 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 458CD6192A72EA39007BF125 /* Lottie */; };
@@ -345,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				458E99C12A79A23000D1E234 /* Assets.xcassets in Resources */,
+				458951E52A7BC8AE0000C3BA /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
