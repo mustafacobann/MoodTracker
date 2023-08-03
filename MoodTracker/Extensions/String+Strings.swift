@@ -9,4 +9,5 @@ import Foundation
 
 extension String {
     static let varela = "VarelaRound-Regular"
+    static let appGroup = "group.io.github.mustafacobann"
 }

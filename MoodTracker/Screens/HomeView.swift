@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct HomeView: View {
 
@@ -21,6 +22,7 @@ struct HomeView: View {
         VStack(spacing: 12) {
             DayRatingView(ratings: Array(ratings)) { selectedRating in
                 saveTodaysRating(selectedRating)
+                WidgetCenter.shared.reloadAllTimelines()
             }
 
             Text("weekly_overview")

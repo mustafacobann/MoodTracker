@@ -29,7 +29,6 @@ struct RatingsChart: View {
         .chartXAxis(.hidden)
         .foregroundStyle(.orange)
         .frame(maxWidth: .infinity)
-        .frame(height: 200)
         .padding()
         .background(.regularMaterial)
         .cornerRadius(10)
