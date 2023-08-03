@@ -11,15 +11,17 @@ struct RatingRow: View {
 
     let rating: Rating
 
-    var dateString: String {
+    var dateString: String? {
+        guard let date = rating.date else { return nil }
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY"
-        return dateFormatter.string(from: rating.date)
+        return dateFormatter.string(from: date)
     }
 
     var body: some View {
         HStack {
-            Text(dateString)
+            Text(dateString ?? "")
             Spacer()
             Text("\(rating.value)")
                 .foregroundColor(.white)
@@ -38,6 +40,6 @@ struct RatingRow: View {
 
 struct RatingRow_Previews: PreviewProvider {
     static var previews: some View {
-        RatingRow(rating: Rating(date: .now, value: 5))
+        RatingRow(rating: Rating.previewRatings[0])
     }
 }

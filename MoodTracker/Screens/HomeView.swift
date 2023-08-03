@@ -9,15 +9,19 @@ import SwiftUI
 
 struct HomeView: View {
 
-    @State private var ratings = Rating.mockRatings
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)])
+    private var ratings: FetchedResults<Rating>
 
     var last7DaysRatings: [Rating] {
-        Array(ratings.prefix(upTo: 7))
+        Array(ratings.prefix(7))
     }
 
     var body: some View {
         VStack(spacing: 12) {
-            DayRatingView(ratings: $ratings)
+            DayRatingView(ratings: Array(ratings)) { selectedRating in
+                saveTodaysRating(selectedRating)
+            }
 
             Text("weekly_overview")
                 .font(.custom(.varela, size: 20))
@@ -40,6 +44,15 @@ struct HomeView: View {
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.orange)
         .animation(.linear, value: ratings.count)
+    }
+
+    private func saveTodaysRating(_ value: Int) {
+        let rating = Rating(context: context)
+        rating.id = UUID()
+        rating.date = .now
+        rating.value = Int16(value)
+
+        try? context.save() // TODO: handle possible errors
     }
 }
 

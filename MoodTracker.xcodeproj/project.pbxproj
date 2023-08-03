@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45187D1B2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */; };
 		452081A52A7938020062BCCF /* VarelaRound-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */; };
 		452081A92A7939240062BCCF /* String+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081A82A7939240062BCCF /* String+Strings.swift */; };
 		452081B32A79504E0062BCCF /* RatingsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452081B22A79504E0062BCCF /* RatingsChart.swift */; };
 		452513FB2A7815670015F24F /* day_rating_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 452513FA2A7815670015F24F /* day_rating_animation.json */; };
 		452513FD2A78186A0015F24F /* RatingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FC2A78186A0015F24F /* RatingRow.swift */; };
-		452513FF2A781A160015F24F /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452513FE2A781A160015F24F /* Rating.swift */; };
+		457B132A2A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457B13282A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld */; };
+		457B132C2A7AB3C5002D2F09 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457B132B2A7AB3C5002D2F09 /* DataController.swift */; };
 		4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */; };
 		4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4580CB7C2A72AFDA00142134 /* HomeView.swift */; };
 		4580CB7F2A72AFDB00142134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4580CB7E2A72AFDB00142134 /* Assets.xcassets */; };
@@ -56,13 +58,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rating+PreviewRatings.swift"; sourceTree = "<group>"; };
 		452081A42A7938020062BCCF /* VarelaRound-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VarelaRound-Regular.ttf"; sourceTree = "<group>"; };
 		452081A82A7939240062BCCF /* String+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Strings.swift"; sourceTree = "<group>"; };
 		452081AA2A793F770062BCCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		452081B22A79504E0062BCCF /* RatingsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsChart.swift; sourceTree = "<group>"; };
 		452513FA2A7815670015F24F /* day_rating_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = day_rating_animation.json; sourceTree = "<group>"; };
 		452513FC2A78186A0015F24F /* RatingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRow.swift; sourceTree = "<group>"; };
-		452513FE2A781A160015F24F /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		457B13292A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodTrackerDataModel.xcdatamodel; sourceTree = "<group>"; };
+		457B132B2A7AB3C5002D2F09 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		4580CB772A72AFDA00142134 /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4580CB7A2A72AFDA00142134 /* MoodTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerApp.swift; sourceTree = "<group>"; };
 		4580CB7C2A72AFDA00142134 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				452081A82A7939240062BCCF /* String+Strings.swift */,
+				45187D1A2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -156,7 +161,8 @@
 		452081B12A7941BC0062BCCF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				452513FE2A781A160015F24F /* Rating.swift */,
+				457B13282A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld */,
+				457B132B2A7AB3C5002D2F09 /* DataController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -337,11 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452513FF2A781A160015F24F /* Rating.swift in Sources */,
 				452081A92A7939240062BCCF /* String+Strings.swift in Sources */,
+				457B132A2A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld in Sources */,
 				452513FD2A78186A0015F24F /* RatingRow.swift in Sources */,
 				4580CB7D2A72AFDA00142134 /* HomeView.swift in Sources */,
+				457B132C2A7AB3C5002D2F09 /* DataController.swift in Sources */,
 				4580CB7B2A72AFDA00142134 /* MoodTrackerApp.swift in Sources */,
+				45187D1B2A7AD7CE00D81F9A /* Rating+PreviewRatings.swift in Sources */,
 				458CD6172A72DA29007BF125 /* DayRatingView.swift in Sources */,
 				458CD61C2A72EA4A007BF125 /* LottieView.swift in Sources */,
 				452081B32A79504E0062BCCF /* RatingsChart.swift in Sources */,
@@ -668,6 +676,19 @@
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		457B13282A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				457B13292A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodel */,
+			);
+			currentVersion = 457B13292A7AB340002D2F09 /* MoodTrackerDataModel.xcdatamodel */;
+			path = MoodTrackerDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4580CB6F2A72AFDA00142134 /* Project object */;
 }
