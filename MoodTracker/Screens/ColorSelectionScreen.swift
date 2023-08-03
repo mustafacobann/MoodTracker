@@ -39,9 +39,9 @@ struct ColorSelectionScreen: View {
                     }
                 }
                 .padding()
-                .background(.thinMaterial)
             }
         }
+        .background(.ultraThinMaterial)
         .clipped()
     }
 }

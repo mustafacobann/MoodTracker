@@ -67,6 +67,7 @@ struct HomeView: View {
         .overlay(alignment: .topTrailing) {
             if presentingColorSelectionSheet {
                 ColorSelectionScreen()
+                    .edgesIgnoringSafeArea(.bottom)
             }
         }
         .animation(.easeInOut, value: presentingColorSelectionSheet)
