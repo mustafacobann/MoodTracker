@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WidgetKit
+import CoreData
 
 struct HomeView: View {
 
@@ -46,7 +47,15 @@ struct HomeView: View {
         .navigationBarTitleDisplayMode(.inline)
         .background(Color.orange)
         .animation(.linear, value: ratings.count)
+        .toolbar {
+            Button(action: removeAllRatings) {
+                Image(systemName: "trash")
+                    .foregroundColor(.black)
+            }
+        }
     }
+
+    // TODO: move CRUD operations to a more appropriate place
 
     private func saveTodaysRating(_ value: Int) {
         let rating = Rating(context: context)
@@ -55,6 +64,18 @@ struct HomeView: View {
         rating.value = Int16(value)
 
         try? context.save() // TODO: handle possible errors
+    }
+    
+    private func removeAllRatings() {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Rating.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        batchDeleteRequest.resultType = .resultTypeObjectIDs
+        let result = try? context.execute(batchDeleteRequest) as? NSBatchDeleteResult
+        let changes: [AnyHashable: Any] = [
+            NSDeletedObjectsKey: result?.result as! [NSManagedObjectID]
+        ]
+        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [context])
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 
