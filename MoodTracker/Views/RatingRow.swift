@@ -13,7 +13,6 @@ struct RatingRow: View {
 
     var dateString: String? {
         guard let date = rating.date else { return nil }
-
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/YYYY"
         return dateFormatter.string(from: date)

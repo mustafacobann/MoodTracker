@@ -13,7 +13,7 @@ struct HomeView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)])
     private var ratings: FetchedResults<Rating>
-    
+
     @AppStorage("appColor") var appColor: Color = .orange
     @State private var presentingColorPicker = false
 

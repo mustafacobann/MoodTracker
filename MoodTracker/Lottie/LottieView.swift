@@ -25,8 +25,7 @@ struct LottieView: UIViewRepresentable {
             }
         }
         return animationView
-        
     }
-    
+
     func updateUIView(_ uiView: Lottie.LottieAnimationView, context: Context) {}
 }

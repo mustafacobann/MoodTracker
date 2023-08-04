@@ -9,8 +9,9 @@ import CoreData
 import Foundation
 
 class PersistenceController {
+
     let container = NSPersistentContainer(name: "MoodTrackerDataModel")
-    
+
     static let shared = PersistenceController()
 
     static var preview: PersistenceController = {
@@ -32,7 +33,7 @@ class PersistenceController {
         let url = URL.storeURL(for: .appGroup, dbName: "Ratings")
         let storeDescription = NSPersistentStoreDescription(url: url)
         container.persistentStoreDescriptions = [storeDescription]
-        
+
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
         }
