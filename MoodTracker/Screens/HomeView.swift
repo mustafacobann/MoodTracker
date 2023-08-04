@@ -11,7 +11,6 @@ import CoreData
 
 struct HomeView: View {
 
-    @Environment(\.managedObjectContext) var context
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)])
     private var ratings: FetchedResults<Rating>
     
@@ -25,7 +24,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 12) {
             DayRatingView(ratings: Array(ratings)) { selectedRating in
-                saveTodaysRating(selectedRating)
+                PersistenceController.shared.saveTodaysRating(selectedRating)
                 WidgetCenter.shared.reloadAllTimelines()
             }
 
@@ -54,7 +53,10 @@ struct HomeView: View {
         .animation(.linear, value: ratings.count)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button(action: removeAllRatings) {
+                Button {
+                    PersistenceController.shared.removeAllRatings()
+                    WidgetCenter.shared.reloadAllTimelines()
+                } label: {
                     Image(systemName: "trash")
                         .foregroundColor(presentingColorPicker ? .gray : .black)
                 }
@@ -73,29 +75,6 @@ struct HomeView: View {
             }
         }
         .animation(.easeInOut, value: presentingColorPicker)
-    }
-
-    // TODO: move CRUD operations to a more appropriate place
-
-    private func saveTodaysRating(_ value: Int) {
-        let rating = Rating(context: context)
-        rating.id = UUID()
-        rating.date = .now
-        rating.value = Int16(value)
-
-        try? context.save() // TODO: handle possible errors
-    }
-    
-    private func removeAllRatings() {
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Rating.fetchRequest()
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        batchDeleteRequest.resultType = .resultTypeObjectIDs
-        let result = try? context.execute(batchDeleteRequest) as? NSBatchDeleteResult
-        let changes: [AnyHashable: Any] = [
-            NSDeletedObjectsKey: result?.result as! [NSManagedObjectID]
-        ]
-        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [context])
-        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

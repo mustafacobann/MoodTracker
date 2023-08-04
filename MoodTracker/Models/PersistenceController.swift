@@ -43,4 +43,30 @@ class PersistenceController {
             }
         }
     }
+
+    func saveTodaysRating(_ value: Int) {
+        let context = container.viewContext
+        let rating = Rating(context: context)
+        rating.id = UUID()
+        rating.date = .now
+        rating.value = Int16(value)
+
+        do {
+            try context.save()
+        } catch {
+            print("Unable to save the rating value: \(error.localizedDescription)")
+        }
+    }
+
+    func removeAllRatings() {
+        let context = container.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Rating.fetchRequest()
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        batchDeleteRequest.resultType = .resultTypeObjectIDs
+        let result = try? context.execute(batchDeleteRequest) as? NSBatchDeleteResult
+        let changes: [AnyHashable: Any] = [
+            NSDeletedObjectsKey: result?.result as! [NSManagedObjectID]
+        ]
+        NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [context])
+    }
 }
