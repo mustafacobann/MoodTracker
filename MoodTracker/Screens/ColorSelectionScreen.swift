@@ -10,6 +10,8 @@ import WidgetKit
 
 struct ColorSelectionScreen: View {
 
+    @Binding var isBeingPresented: Bool
+
     let colors: [Color] = [
         .orange,
         .yellow,
@@ -35,6 +37,7 @@ struct ColorSelectionScreen: View {
                             .onTapGesture {
                                 appColor = color
                                 WidgetCenter.shared.reloadAllTimelines()
+                                isBeingPresented = false
                             }
                     }
                 }
@@ -58,6 +61,6 @@ struct ColorCircle: View {
 
 struct ColorSelectionScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSelectionScreen()
+        ColorSelectionScreen(isBeingPresented: .constant(true))
     }
 }
