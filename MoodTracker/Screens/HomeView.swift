@@ -16,7 +16,7 @@ struct HomeView: View {
     private var ratings: FetchedResults<Rating>
     
     @AppStorage("appColor") var appColor: Color = .orange
-    @State private var presentingColorSelectionSheet = false
+    @State private var presentingColorPicker = false
 
     var last7DaysRatings: [Rating] {
         Array(ratings.prefix(7))
@@ -47,7 +47,7 @@ struct HomeView: View {
             }
         }
         .clipped()
-        .allowsHitTesting(!presentingColorSelectionSheet)
+        .allowsHitTesting(!presentingColorPicker)
         .navigationTitle("mood_tracker")
         .navigationBarTitleDisplayMode(.inline)
         .background(appColor)
@@ -56,21 +56,23 @@ struct HomeView: View {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button(action: removeAllRatings) {
                     Image(systemName: "trash")
-                        .foregroundColor(.black)
+                        .foregroundColor(presentingColorPicker ? .gray : .black)
                 }
-                Button(action: { presentingColorSelectionSheet.toggle() }) {
-                    Image(systemName: presentingColorSelectionSheet ? "paintpalette.fill" : "paintpalette")
+                .disabled(presentingColorPicker)
+
+                Button(action: { presentingColorPicker.toggle() }) {
+                    Image(systemName: presentingColorPicker ? "paintpalette.fill" : "paintpalette")
                         .foregroundColor(.black)
                 }
             }
         }
         .overlay(alignment: .topTrailing) {
-            if presentingColorSelectionSheet {
+            if presentingColorPicker {
                 ColorSelectionScreen()
                     .edgesIgnoringSafeArea(.bottom)
             }
         }
-        .animation(.easeInOut, value: presentingColorSelectionSheet)
+        .animation(.easeInOut, value: presentingColorPicker)
     }
 
     // TODO: move CRUD operations to a more appropriate place
