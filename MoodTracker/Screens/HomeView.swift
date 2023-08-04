@@ -68,7 +68,7 @@ struct HomeView: View {
         }
         .overlay(alignment: .topTrailing) {
             if presentingColorPicker {
-                ColorSelectionScreen()
+                ColorSelectionScreen(isBeingPresented: $presentingColorPicker)
                     .edgesIgnoringSafeArea(.bottom)
             }
         }
