@@ -16,3 +16,4 @@ iOS 16+
 - [x] Data visualization via Swift Charts 
 - [x] Widget support
 - [x] App & Widget UI Customization
+- [x] Localization (🇹🇷🇬🇧)
