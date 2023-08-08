@@ -17,3 +17,7 @@ iOS 16+
 - [x] Widget support
 - [x] App & Widget UI Customization
 - [x] Localization (🇹🇷🇬🇧)
+- [ ] Local Push Notifications
+
+## How to contribute
+Feel free to open PRs! I'd be more than happy to review and merge them :) 
